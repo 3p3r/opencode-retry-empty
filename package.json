@@ -1,0 +1,51 @@
+{
+  "name": "opencode-retry-empty",
+  "version": "1.0.0",
+  "description": "retries unexptected, successful, yet empty responses back from local models in opencode",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js",
+    "./server": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3p3r/opencode-retry-empty.git"
+  },
+  "keywords": [
+    "opencode",
+    "plugin",
+    "retry",
+    "empty",
+    "response"
+  ],
+  "author": "Sepehr Laal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/3p3r/opencode-retry-empty/issues"
+  },
+  "homepage": "https://github.com/3p3r/opencode-retry-empty#readme",
+  "engines": {
+    "opencode": ">=1.0.0"
+  },
+  "peerDependencies": {
+    "@opencode-ai/plugin": ">=1.0.0"
+  },
+  "devDependencies": {
+    "@opencode-ai/plugin": "latest",
+    "@types/debug": "^4.1.13",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "debug": "^4.4.3",
+    "exponential-backoff": "^3.1.3"
+  }
+}
